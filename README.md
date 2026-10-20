@@ -1,5 +1,7 @@
 # DiDCheck
 
+[![Tests](https://github.com/nithinvargese09-cmyk/DiDCheck/actions/workflows/tests.yml/badge.svg)](https://github.com/nithinvargese09-cmyk/DiDCheck/actions/workflows/tests.yml)
+
 DiDCheck implements the pretreatment moment diagnostics in **Distributional Pre-Trends: A Variance Diagnostic for Difference-in-Differences Designs**, by Aditya Alaparti, Amann Katta, Nithin Vargese, and Swaraj Sainani (2026). All four authors contributed equally. All share the affiliation Thomas Jefferson High School for Science and Technology, Alexandria, Virginia, United States.
 
 The variance diagnostic tests whether the treated/control ratio of variances is constant across a specified common pretreatment window **after within-unit demeaning**. It uses full temporal covariance, offers the companion mean diagnostic, and implements null-centered whole-unit or whole-cluster pairs bootstrap inference for the components and their sum.

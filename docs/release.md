@@ -40,7 +40,7 @@ python3 -m venv ../didcheck-wheel-test
 ../didcheck-wheel-test/bin/python -I -c "import didcheck; print(didcheck.__version__, didcheck.__file__)"
 ```
 
-Use `Scripts/python.exe` instead of `bin/python` on Windows. The Python version matrix in GitHub Actions is a proposed automated check until that workflow has actually run; local results do not establish execution on all versions or operating systems.
+Use `Scripts/python.exe` instead of `bin/python` on Windows. The Python 3.10–3.13 matrix passed on Ubuntu for the initial release; see `VALIDATION_REPORT.md` for the executed run. Each later release must pass its own workflow.
 
 ## GitHub release and Trusted Publishing
 

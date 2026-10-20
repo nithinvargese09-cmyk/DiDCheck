@@ -57,7 +57,7 @@ The local scientific environment uses Python 3.12.3, NumPy 2.4.3, SciPy 1.18.1, 
 
 The full 198,000-panel analytic grid, all 8,000 principal bootstrap outer panels and the separate 1,000-panel diagnostic were **not rerun for DiDCheck development**. Their complete saved outputs belong to the separate archival replication package. No historical China Shock or minimum-wage p-value was reconstructed or endorsed.
 
-Python >=3.10 is the intended package range; only Python 3.12.3/macOS ARM64 was executed locally. The supplied GitHub Actions matrix is configured, not executed remotely. Windows/Linux installations, all supported dependency combinations and other BLAS/platform implementations remain untested here. Cross-environment bit equality is not guaranteed; the reference scripts separately report bit and tolerance agreement.
+Python >=3.10 is the intended package range; Python 3.12.3/macOS ARM64 was executed locally. [GitHub Actions run 39358833207](https://github.com/nithinvargese09-cmyk/DiDCheck/actions/runs/39358833207) passed on Ubuntu for Python 3.10, 3.11, 3.12, and 3.13, including the automated suite, 102 reference comparisons, 15,000-panel benchmarks, both examples, builds, and metadata checks. Windows, all supported dependency combinations, and other BLAS/platform implementations remain untested. Cross-environment bit equality is not guaranteed; the reference scripts separately report bit and tolerance agreement.
 
 ## Remaining methodological limits
 
