@@ -1,0 +1,35 @@
+{
+  "test_environment": "fresh virtual environment without system site packages",
+  "python": "3.12.3",
+  "operating_system": "Darwin",
+  "architecture": "arm64",
+  "versions": {
+    "didcheck": "0.1.0",
+    "numpy": "2.4.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.3",
+    "matplotlib": "3.10.8",
+    "pytest": "9.0.3",
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "fonttools": "4.67.0",
+    "kiwisolver": "1.5.1",
+    "packaging": "26.3",
+    "pillow": "13.0.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "six": "1.17.0"
+  },
+  "pytest": {
+    "passed": 120,
+    "subtests_passed": 65,
+    "failed": 0
+  },
+  "pip_check": "No broken requirements found",
+  "isolated_import": "passed; package imported from installed wheel",
+  "examples": [
+    "synthetic_panel.py passed with 199 draws",
+    "clustered_panel.py passed with 199 draws"
+  ],
+  "other_python_versions_or_operating_systems_executed": false
+}

@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "reference": "Finalized October 2026 preprint companion, zenodo_preprint_2026-10-12_v3",
+  "scope": "First 100 panels of primary_null_N50, primary_joint_N2000 and nongaussian_exponential (30 array comparisons); first outer panel and all 199 centered inner draws of each of eight prespecified bootstrap cases (72 comparisons). Total 102. No full study rerun.",
+  "historical_supporting_files": "Unavailable; these references are the newly executed October 2026 analysis, not recovered historical code or data.",
+  "base_seed": 2026101207,
+  "core_sha256": "e637f4da954ec99dc3bf43095b5cb3c51ca26f46ef291e9dbf63da4f0c4b62f9",
+  "configuration": {
+    "file": "records/frozen_simulation_config.json",
+    "sha256": "2ddca60129c3c48839a3c2bfe69b6fa71cb31e664c5429f03a62042ad8ff50fd"
+  },
+  "frozen_runner": {
+    "file": "analysis/simulations.py",
+    "sha256": "ffd997cb704b6c50a98ad4771d71aa47f2dafa93b5b4d1449cc5e5a5c3470e76",
+    "generator": "Validation generator narrowly transcribes selected frozen DGP cases and random draw order."
+  },
+  "fixture": {
+    "file": "fixtures/published_replay_prefixes.npz",
+    "sha256": "33271bdaed617f3157d23aeb0dae96c557e1d1b02f40726213e7e8155ec02ee7",
+    "bytes": 128312,
+    "array_count": 102,
+    "contents": "Unmodified numeric prefixes copied from the actual frozen output archives; no simulated raw panel data included."
+  },
+  "reference_runtime": {
+    "python": "3.12.3 (v3.12.3:f6650f9ad7, Apr  9 2024, 08:18:47) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "numpy": "2.4.3"
+  },
+  "comparison_policy": "Report exact equality separately. Portable pass requires matching core hash and all 102 comparisons within rtol=1e-10, atol=1e-12, with equal NaNs; bootstrap tail-count p-values require exact equality. --strict-bitwise additionally requires all 102 exact.",
+  "cases": [
+    {
+      "configuration": {
+        "id": "primary_null_N50",
+        "family": "primary",
+        "index": 0,
+        "N": 50,
+        "repetitions": 5000,
+        "mean_delta": 0,
+        "variance_delta": 0,
+        "law": "normal",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "source_file": "results/raw/primary_null_N50.npz",
+      "source_sha256": "7b3efa0de19bac21bfd82bf7fd5122e3c6e884ee52cece30e9038c620c5e5aa4",
+      "selection": "first 100 analytic panels",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "p_mean",
+        "p_var",
+        "p_fisher",
+        "ratios",
+        "h_mean",
+        "h_var",
+        "cov_mean",
+        "cov_var"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "primary_joint_N2000",
+        "family": "primary",
+        "index": 15,
+        "N": 2000,
+        "repetitions": 5000,
+        "mean_delta": 0.15,
+        "variance_delta": 0.08,
+        "law": "normal",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "source_file": "results/raw/primary_joint_N2000.npz",
+      "source_sha256": "1be3bb2c260cc6df70407a9f6c1dc5ffabd5c60b17c10564e9223168dced80d8",
+      "selection": "first 100 analytic panels",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "p_mean",
+        "p_var",
+        "p_fisher",
+        "ratios",
+        "h_mean",
+        "h_var",
+        "cov_mean",
+        "cov_var"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "nongaussian_exponential",
+        "family": "nongaussian",
+        "index": 56,
+        "N": 2000,
+        "repetitions": 2000,
+        "mean_delta": 0.0,
+        "variance_delta": 0.0,
+        "law": "exponential",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": false
+      },
+      "source_file": "results/raw/nongaussian_exponential.npz",
+      "source_sha256": "fb80ba66e580bf9d94a9349b8f76c282e12f55d8c7bc649aaec6481eccbadbdd",
+      "selection": "first 100 analytic panels",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "p_mean",
+        "p_var",
+        "p_fisher",
+        "ratios",
+        "h_mean",
+        "h_var",
+        "cov_mean",
+        "cov_var"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "bootstrap_iid_normal_null",
+        "family": "bootstrap",
+        "index": 0,
+        "N": 200,
+        "repetitions": 1000,
+        "inner_repetitions": 199,
+        "mean_delta": 0.0,
+        "variance_delta": 0.0,
+        "law": "normal",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "source_file": "results/raw/bootstrap_iid_normal_null.npz",
+      "source_sha256": "18ad5d1b4476c53f6fbe28c0d570c82877eeee233f3affeba9e9034b2ef19f84",
+      "selection": "first outer panel with all 199 centered inner draws",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "W_sum",
+        "p_boot_mean",
+        "p_boot_var",
+        "p_boot_sum",
+        "inner_W_mean_centered",
+        "inner_W_var_centered",
+        "inner_W_sum_centered"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "bootstrap_iid_normal_variance_alt",
+        "family": "bootstrap",
+        "index": 1,
+        "N": 200,
+        "repetitions": 1000,
+        "inner_repetitions": 199,
+        "mean_delta": 0.0,
+        "variance_delta": 0.2,
+        "law": "normal",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "source_file": "results/raw/bootstrap_iid_normal_variance_alt.npz",
+      "source_sha256": "e6b95b7b0bdabb1d709aa74b4d08f76f78076cace2a71f305bccfdc84f2aa89f",
+      "selection": "first outer panel with all 199 centered inner draws",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "W_sum",
+        "p_boot_mean",
+        "p_boot_var",
+        "p_boot_sum",
+        "inner_W_mean_centered",
+        "inner_W_var_centered",
+        "inner_W_sum_centered"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "bootstrap_iid_exponential_null",
+        "family": "bootstrap",
+        "index": 2,
+        "N": 200,
+        "repetitions": 1000,
+        "inner_repetitions": 199,
+        "mean_delta": 0.0,
+        "variance_delta": 0.0,
+        "law": "exponential",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": false
+      },
+      "source_file": "results/raw/bootstrap_iid_exponential_null.npz",
+      "source_sha256": "8c36a75de360988afc1d7fba5717c3557c6e896383d9d1004d0b8e249cdca9c9",
+      "selection": "first outer panel with all 199 centered inner draws",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "W_sum",
+        "p_boot_mean",
+        "p_boot_var",
+        "p_boot_sum",
+        "inner_W_mean_centered",
+        "inner_W_var_centered",
+        "inner_W_sum_centered"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "bootstrap_iid_exponential_variance_alt",
+        "family": "bootstrap",
+        "index": 3,
+        "N": 200,
+        "repetitions": 1000,
+        "inner_repetitions": 199,
+        "mean_delta": 0.0,
+        "variance_delta": 0.2,
+        "law": "exponential",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": false
+      },
+      "source_file": "results/raw/bootstrap_iid_exponential_variance_alt.npz",
+      "source_sha256": "ebea32dbeea6d98d95a8e839d4027e654ca0ac834340fb67019e7e2a0f6be85a",
+      "selection": "first outer panel with all 199 centered inner draws",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "W_sum",
+        "p_boot_mean",
+        "p_boot_var",
+        "p_boot_sum",
+        "inner_W_mean_centered",
+        "inner_W_var_centered",
+        "inner_W_sum_centered"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "bootstrap_serial_normal_null",
+        "family": "bootstrap",
+        "index": 4,
+        "N": 200,
+        "repetitions": 1000,
+        "inner_repetitions": 199,
+        "mean_delta": 0.0,
+        "variance_delta": 0.0,
+        "law": "normal",
+        "phi": 0.5,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "source_file": "results/raw/bootstrap_serial_normal_null.npz",
+      "source_sha256": "e9a829b2ccb713e56dad49b03a73745d6a7d5e01b2374f36e1f93e2513f54dc9",
+      "selection": "first outer panel with all 199 centered inner draws",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "W_sum",
+        "p_boot_mean",
+        "p_boot_var",
+        "p_boot_sum",
+        "inner_W_mean_centered",
+        "inner_W_var_centered",
+        "inner_W_sum_centered"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "bootstrap_serial_normal_variance_alt",
+        "family": "bootstrap",
+        "index": 5,
+        "N": 200,
+        "repetitions": 1000,
+        "inner_repetitions": 199,
+        "mean_delta": 0.0,
+        "variance_delta": 0.2,
+        "law": "normal",
+        "phi": 0.5,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "source_file": "results/raw/bootstrap_serial_normal_variance_alt.npz",
+      "source_sha256": "568c22a370689dd5b974307ad01c6a15ceba80e6defd79eb906ed88816b281fc",
+      "selection": "first outer panel with all 199 centered inner draws",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "W_sum",
+        "p_boot_mean",
+        "p_boot_var",
+        "p_boot_sum",
+        "inner_W_mean_centered",
+        "inner_W_var_centered",
+        "inner_W_sum_centered"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "bootstrap_cluster_normal_null",
+        "family": "bootstrap",
+        "index": 6,
+        "N": 200,
+        "repetitions": 1000,
+        "inner_repetitions": 199,
+        "mean_delta": 0.0,
+        "variance_delta": 0.0,
+        "law": "normal",
+        "phi": 0.5,
+        "cluster_size": 5,
+        "cluster_rho": 0.4,
+        "fisher_valid": true
+      },
+      "source_file": "results/raw/bootstrap_cluster_normal_null.npz",
+      "source_sha256": "29b09e004c1f59222c242ef321499bc016ee5afa5ebd3f1e6ec85272d52f2172",
+      "selection": "first outer panel with all 199 centered inner draws",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "W_sum",
+        "p_boot_mean",
+        "p_boot_var",
+        "p_boot_sum",
+        "inner_W_mean_centered",
+        "inner_W_var_centered",
+        "inner_W_sum_centered"
+      ]
+    },
+    {
+      "configuration": {
+        "id": "bootstrap_cluster_normal_variance_alt",
+        "family": "bootstrap",
+        "index": 7,
+        "N": 200,
+        "repetitions": 1000,
+        "inner_repetitions": 199,
+        "mean_delta": 0.0,
+        "variance_delta": 0.2,
+        "law": "normal",
+        "phi": 0.5,
+        "cluster_size": 5,
+        "cluster_rho": 0.4,
+        "fisher_valid": true
+      },
+      "source_file": "results/raw/bootstrap_cluster_normal_variance_alt.npz",
+      "source_sha256": "8c6e6badd4772c2bdcf1b0937e77a004a0fc897f61ca9b1fe74a9800bf26f156",
+      "selection": "first outer panel with all 199 centered inner draws",
+      "arrays": [
+        "W_mean",
+        "W_var",
+        "W_sum",
+        "p_boot_mean",
+        "p_boot_var",
+        "p_boot_sum",
+        "inner_W_mean_centered",
+        "inner_W_var_centered",
+        "inner_W_sum_centered"
+      ]
+    }
+  ]
+}

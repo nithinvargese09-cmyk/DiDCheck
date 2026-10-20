@@ -1,0 +1,6 @@
+{
+  "source": "Finalized October 2026 paper companion analysis/statistical_core.py",
+  "sha256": "e637f4da954ec99dc3bf43095b5cb3c51ca26f46ef291e9dbf63da4f0c4b62f9",
+  "adaptation": "The internal numerical core is copied byte-for-byte. Public wrappers add validation and results presentation; historical wording in this frozen file is retained for provenance.",
+  "source_implementation_version": "1.0.0"
+}

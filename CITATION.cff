@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "Please cite DiDCheck and its companion research paper when using this software."
+type: software
+title: "DiDCheck: Distributional Pre-Trends Diagnostics"
+version: 0.1.0
+repository-code: "https://github.com/nithinvargese09-cmyk/DiDCheck"
+license: BSD-3-Clause
+authors:
+  - family-names: Alaparti
+    given-names: Aditya
+    affiliation: Thomas Jefferson High School for Science and Technology
+  - family-names: Katta
+    given-names: Amann
+    affiliation: Thomas Jefferson High School for Science and Technology
+  - family-names: Vargese
+    given-names: Nithin
+    affiliation: Thomas Jefferson High School for Science and Technology
+  - family-names: Sainani
+    given-names: Swaraj
+    affiliation: Thomas Jefferson High School for Science and Technology
+preferred-citation:
+  type: report
+  doi: "10.5281/zenodo.23328869"
+  url: "https://zenodo.org/records/23328869"
+  notes: "Working paper (preprint); not represented as peer reviewed."
+  title: "Distributional Pre-Trends: A Variance Diagnostic for Difference-in-Differences Designs"
+  year: 2026
+  authors:
+    - family-names: Alaparti
+      given-names: Aditya
+      affiliation: Thomas Jefferson High School for Science and Technology
+    - family-names: Katta
+      given-names: Amann
+      affiliation: Thomas Jefferson High School for Science and Technology
+    - family-names: Vargese
+      given-names: Nithin
+      affiliation: Thomas Jefferson High School for Science and Technology
+    - family-names: Sainani
+      given-names: Swaraj
+      affiliation: Thomas Jefferson High School for Science and Technology
+keywords:
+  - difference-in-differences
+  - pretrends
+  - variance diagnostics
+  - centered bootstrap
+  - econometrics

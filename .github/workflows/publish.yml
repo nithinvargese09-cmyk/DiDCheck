@@ -1,0 +1,48 @@
+name: Publish approved release to PyPI
+
+# Manual dispatch deliberately separates release creation from PyPI publication.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing approved GitHub release tag
+        required: true
+        default: v0.1.0
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pypi-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/didcheck/
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Download the approved release artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" == "v0.1.0" ]]
+          gh release view "$RELEASE_TAG" --json isDraft,isPrerelease | jq -e '.isDraft == false and .isPrerelease == false'
+          mkdir dist
+          gh release download "$RELEASE_TAG" --dir dist --pattern 'didcheck-0.1.0-py3-none-any.whl' --pattern 'didcheck-0.1.0.tar.gz' --pattern 'SHA256SUMS.txt'
+          cd dist
+          test "$(wc -l < SHA256SUMS.txt | tr -d ' ')" = 2
+          sha256sum --check --strict SHA256SUMS.txt
+          rm SHA256SUMS.txt
+      - name: Publish the same wheel and sdist through OIDC
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
+        with:
+          packages-dir: dist/

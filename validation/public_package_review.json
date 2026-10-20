@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "reviewed_files": 51,
+  "scope": "Public source/docs/tests/compact simulated references; source AST and local documentation links checked.",
+  "excluded": [
+    "caches",
+    "private runtime logs",
+    "local environments",
+    "old paper versions",
+    "third-party empirical data"
+  ],
+  "sensitive_path_or_credential_patterns_found": 0,
+  "numeric_reference_arrays_only": true,
+  "license": "BSD-3-Clause; project owner confirms rights and authorization from all four authors",
+  "paper_doi": "10.5281/zenodo.23328869; verified against Zenodo record 23328869",
+  "original_paper_modified": false
+}

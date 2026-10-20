@@ -1,0 +1,421 @@
+{
+  "status": "PASS",
+  "label": "PARTIAL_STUDY_REPRODUCTION",
+  "completed_utc": "2026-10-19T00:30:34.124144+00:00",
+  "scope": "Three full prespecified analytic scenarios, 5000 panels each (15000 panels total): Gaussian joint null at 50 and 2000 units per group, and Gaussian variance-only departure at 2000 units per group. This is not the full 198000-panel analytic study or any bootstrap study.",
+  "interpretation": "Independent package execution reproduces selected frozen study outputs using the same scientific core and DGP. This does not independently prove the estimator or reproduce the full 198000-panel analytic study, bootstrap studies, or historical empirical analysis.",
+  "total_panels": 15000,
+  "case_count": 3,
+  "batch_size": 100,
+  "nominal_alpha": 0.05,
+  "rejection_rule": "Finite valid p <= 0.05; all 5000 scheduled panels remain in the denominator. Failed panels are reported, never replaced.",
+  "array_check_count": 24,
+  "exact_match_count": 24,
+  "tolerance_match_count": 24,
+  "result_count": 9,
+  "all_counts_match": true,
+  "strict_bitwise": true,
+  "rtol": 1e-10,
+  "atol": 1e-12,
+  "elapsed_seconds": 7.5772780000006605,
+  "provenance_sha256": "e7fabb0bdba71a038ab3ff3e159cd156d3e142a80256c5b2e7b53793e9dbab8f",
+  "fixture_sha256": "271bf9fe34cdef5c03de1b612f217a2795250a8464f898dba82039de48548754",
+  "core_sha256": "e637f4da954ec99dc3bf43095b5cb3c51ca26f46ef291e9dbf63da4f0c4b62f9",
+  "generator_module_sha256": "31c8140d6ba9d49e2dd91184a0d614b8bddfe89c280ec518b6b7b17af02182cd",
+  "reproduction_script_sha256": "dd5da4c71241e82fec7e57d40e3e2edaa1e8a6452c26136503e79bb94202f2a7",
+  "original_configuration": {
+    "file": "records/frozen_simulation_config.json",
+    "sha256": "2ddca60129c3c48839a3c2bfe69b6fa71cb31e664c5429f03a62042ad8ff50fd"
+  },
+  "original_summary": {
+    "file": "results/simulation_summary.csv",
+    "sha256": "b72d818cecba52a0f26949c81367acc208f834ae99a9086654ed195654b25c86"
+  },
+  "original_runner": {
+    "file": "analysis/simulations.py",
+    "sha256": "ffd997cb704b6c50a98ad4771d71aa47f2dafa93b5b4d1449cc5e5a5c3470e76"
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "2.4.3",
+    "didcheck": "0.1.0",
+    "system": "Darwin",
+    "package_location": "installed distribution"
+  },
+  "cases": [
+    {
+      "case": "primary_null_N50",
+      "configuration": {
+        "id": "primary_null_N50",
+        "family": "primary",
+        "index": 0,
+        "N": 50,
+        "repetitions": 5000,
+        "mean_delta": 0,
+        "variance_delta": 0,
+        "law": "normal",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "seed_sequence": [
+        2026101207,
+        1,
+        0
+      ],
+      "source_file": "results/raw/primary_null_N50.npz",
+      "source_sha256": "7b3efa0de19bac21bfd82bf7fd5122e3c6e884ee52cece30e9038c620c5e5aa4",
+      "elapsed_seconds": 0.12130224999964412,
+      "results": [
+        {
+          "test": "mean",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 302,
+          "rate_percent": 6.04,
+          "reference_rejections": 302,
+          "reference_rate_percent": 6.04,
+          "counts_match": true
+        },
+        {
+          "test": "variance",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 422,
+          "rate_percent": 8.44,
+          "reference_rejections": 422,
+          "reference_rate_percent": 8.44,
+          "counts_match": true
+        },
+        {
+          "test": "Fisher",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 400,
+          "rate_percent": 8.0,
+          "reference_rejections": 400,
+          "reference_rate_percent": 8.0,
+          "counts_match": true
+        }
+      ]
+    },
+    {
+      "case": "primary_null_N2000",
+      "configuration": {
+        "id": "primary_null_N2000",
+        "family": "primary",
+        "index": 3,
+        "N": 2000,
+        "repetitions": 5000,
+        "mean_delta": 0,
+        "variance_delta": 0,
+        "law": "normal",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "seed_sequence": [
+        2026101207,
+        1,
+        3
+      ],
+      "source_file": "results/raw/primary_null_N2000.npz",
+      "source_sha256": "5799486e3ef89e864eea7b6e12528250df0abea84c81ae7c55847d99f99f8e85",
+      "elapsed_seconds": 3.759657041999162,
+      "results": [
+        {
+          "test": "mean",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 247,
+          "rate_percent": 4.94,
+          "reference_rejections": 247,
+          "reference_rate_percent": 4.94,
+          "counts_match": true
+        },
+        {
+          "test": "variance",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 248,
+          "rate_percent": 4.96,
+          "reference_rejections": 248,
+          "reference_rate_percent": 4.96,
+          "counts_match": true
+        },
+        {
+          "test": "Fisher",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 251,
+          "rate_percent": 5.02,
+          "reference_rejections": 251,
+          "reference_rate_percent": 5.02,
+          "counts_match": true
+        }
+      ]
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "configuration": {
+        "id": "primary_variance_only_N2000",
+        "family": "primary",
+        "index": 11,
+        "N": 2000,
+        "repetitions": 5000,
+        "mean_delta": 0,
+        "variance_delta": 0.08,
+        "law": "normal",
+        "phi": 0.0,
+        "cluster_size": 1,
+        "cluster_rho": 0.0,
+        "fisher_valid": true
+      },
+      "seed_sequence": [
+        2026101207,
+        1,
+        11
+      ],
+      "source_file": "results/raw/primary_variance_only_N2000.npz",
+      "source_sha256": "d4d9e9b26ef39e177a617ad2b4ed7121fa3581e98a4e84ad6e742dae9a721d10",
+      "elapsed_seconds": 3.6945023329990363,
+      "results": [
+        {
+          "test": "mean",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 256,
+          "rate_percent": 5.12,
+          "reference_rejections": 256,
+          "reference_rate_percent": 5.12,
+          "counts_match": true
+        },
+        {
+          "test": "variance",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 2451,
+          "rate_percent": 49.02,
+          "reference_rejections": 2451,
+          "reference_rate_percent": 49.02,
+          "counts_match": true
+        },
+        {
+          "test": "Fisher",
+          "scheduled_repetitions": 5000,
+          "valid_repetitions": 5000,
+          "invalid_repetitions": 0,
+          "rejections": 1920,
+          "rate_percent": 38.4,
+          "reference_rejections": 1920,
+          "reference_rate_percent": 38.4,
+          "counts_match": true
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "case": "primary_null_N50",
+      "array": "W_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N50",
+      "array": "W_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N50",
+      "array": "p_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N50",
+      "array": "p_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N50",
+      "array": "p_fisher",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N50",
+      "array": "valid_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N50",
+      "array": "valid_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N50",
+      "array": "valid_fisher",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N2000",
+      "array": "W_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N2000",
+      "array": "W_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N2000",
+      "array": "p_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N2000",
+      "array": "p_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N2000",
+      "array": "p_fisher",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N2000",
+      "array": "valid_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N2000",
+      "array": "valid_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_null_N2000",
+      "array": "valid_fisher",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "array": "W_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "array": "W_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "array": "p_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "array": "p_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "array": "p_fisher",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "array": "valid_mean",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "array": "valid_var",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "case": "primary_variance_only_N2000",
+      "array": "valid_fisher",
+      "shape_match": true,
+      "exact_match": true,
+      "tolerance_match": true,
+      "max_absolute_error": 0.0
+    }
+  ]
+}
