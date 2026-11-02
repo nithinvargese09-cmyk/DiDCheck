@@ -6,7 +6,7 @@ DiDCheck implements the pretreatment moment diagnostics in **Distributional Pre-
 
 The variance diagnostic tests whether the treated/control ratio of variances is constant across a specified common pretreatment window **after within-unit demeaning**. It uses full temporal covariance, offers the companion mean diagnostic, and implements null-centered whole-unit or whole-cluster pairs bootstrap inference for the components and their sum.
 
-This is companion research software, version 0.1.0. It is not a treatment-effect estimator or a certificate of parallel trends. Rejection concerns a stated moment restriction; nonrejection does not establish equivalence or causal identification. Finite-sample calibration and power remain limited in the paper's evaluated settings.
+This is companion research software, version 0.1.1. It is not a treatment-effect estimator or a certificate of parallel trends. Rejection concerns a stated moment restriction; nonrejection does not establish equivalence or causal identification. Finite-sample calibration and power remain limited in the paper's evaluated settings.
 
 **Research preprint:** [Distributional Pre-Trends](https://doi.org/10.5281/zenodo.23328869), Zenodo working paper, October 13, 2026. This citation does not imply peer review.
 
@@ -15,7 +15,7 @@ This is companion research software, version 0.1.0. It is not a treatment-effect
 For the published release:
 
 ```sh
-python -m pip install didcheck==0.1.0
+python -m pip install didcheck==0.1.1
 ```
 
 ### Install and test from source
@@ -29,7 +29,7 @@ python -m pip install ".[test]"
 python -m pytest
 ```
 
-On Windows, activate with `.venv\Scripts\activate`. Alternatively install the included wheel with `python -m pip install dist/didcheck-0.1.0-py3-none-any.whl`. Dependencies are NumPy, SciPy, pandas, and Matplotlib. See [release instructions](docs/release.md) for the maintainer workflow.
+On Windows, activate with `.venv\Scripts\activate`. Alternatively install the included wheel with `python -m pip install dist/didcheck-0.1.1-py3-none-any.whl`. Dependencies are NumPy, SciPy, pandas, and Matplotlib. See [release instructions](docs/release.md) for the maintainer workflow.
 
 ## Quick start: synthetic data
 
@@ -86,6 +86,6 @@ The paper's full study included 198,000 principal analytic panels, 8,000 princip
 
 ## Citation, attribution and license
 
-Use [CITATION.cff](CITATION.cff). This project implements the specific methods in the companion paper; it does not claim a new method beyond that contribution. The internal `_core.py` is preserved byte-for-byte from the finalized scientific implementation, with its SHA-256 in `validation/CORE_PROVENANCE.json`. See [attribution and AI assistance](docs/attribution.md).
+Use [CITATION.cff](CITATION.cff). This project implements the specific methods in the companion paper; it does not claim a new method beyond that contribution. The internal `_core.py` is preserved byte-for-byte from the finalized scientific implementation, with its SHA-256 in `validation/CORE_PROVENANCE.json`. See [attribution and provenance](docs/attribution.md).
 
 BSD-3-Clause, selected by the project owner; see [LICENSE](LICENSE). No institutional endorsement is implied. Third-party datasets, private review conversations, historical drafts, credentials and local-machine logs are excluded. The package includes synthetic reference outputs only.

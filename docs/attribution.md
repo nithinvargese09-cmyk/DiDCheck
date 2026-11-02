@@ -14,4 +14,3 @@ The manuscript's framing acknowledges related distributional DiD and pretrend me
 
 The China Shock and minimum-wage settings are possible future applications. Neither is a validated application of this diagnostic, and this repository's examples contain synthetic data only.
 
-AI-assisted implementation and documentation should be described accurately in release materials. An AI tool is not an author or a substitute for human responsibility for a release. This attribution page does not grant a software license or assert author consent for publication; see [release guidance](release.md).

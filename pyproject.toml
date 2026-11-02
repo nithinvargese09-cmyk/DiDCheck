@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "didcheck"
-version = "0.1.0"
+version = "0.1.1"
 description = "Full temporal covariance and centered bootstrap diagnostics for pretreatment variance restrictions"
 readme = "README.md"
 requires-python = ">=3.10"

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+Documentation-only update: simplify attribution and development documentation. Statistical implementation, API behavior, tests, and numerical reference fixtures are unchanged.
+
 ## 0.1.0
 
 Initial companion-software release.

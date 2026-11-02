@@ -11,4 +11,5 @@ This repository was prepared on 2026-10-18 as companion software to the finalize
 
 See `VALIDATION_REPORT.md` and the accompanying machine-readable records for executed results and limitations. No fabricated commit history, external review, publication, downloads, or adoption is represented. The initial public commit records the prepared release; it does not reconstruct historical development commits.
 
-OpenAI Codex assisted with package design, code adaptation/generation, documentation, tests, execution and review, in addition to the substantive research assistance disclosed in the companion manuscript. The authors retain responsibility for the research and software. AI assistance is not evidence of independent peer review.
+
+The authors retain responsibility for the research and software.

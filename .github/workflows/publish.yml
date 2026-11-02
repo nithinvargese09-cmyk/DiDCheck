@@ -7,7 +7,7 @@ on:
       tag:
         description: Existing approved GitHub release tag
         required: true
-        default: v0.1.0
+        default: v0.1.1
         type: string
 
 permissions:
@@ -34,10 +34,10 @@ jobs:
           RELEASE_TAG: ${{ inputs.tag }}
         run: |
           set -euo pipefail
-          [[ "$RELEASE_TAG" == "v0.1.0" ]]
+          [[ "$RELEASE_TAG" == "v0.1.1" ]]
           gh release view "$RELEASE_TAG" --json isDraft,isPrerelease | jq -e '.isDraft == false and .isPrerelease == false'
           mkdir dist
-          gh release download "$RELEASE_TAG" --dir dist --pattern 'didcheck-0.1.0-py3-none-any.whl' --pattern 'didcheck-0.1.0.tar.gz' --pattern 'SHA256SUMS.txt'
+          gh release download "$RELEASE_TAG" --dir dist --pattern 'didcheck-0.1.1-py3-none-any.whl' --pattern 'didcheck-0.1.1.tar.gz' --pattern 'SHA256SUMS.txt'
           cd dist
           test "$(wc -l < SHA256SUMS.txt | tr -d ' ')" = 2
           sha256sum --check --strict SHA256SUMS.txt
